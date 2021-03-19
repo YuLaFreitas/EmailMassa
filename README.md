@@ -12,8 +12,9 @@ Dispara email em massa, permitindo que o usuário coloque algumas variáveis
 
  #Entrada:
  
- @ Mensagem
- @ Variavel
+ >> Mensagem
+ >> Variavel
+
 Prezado <nome>
  
   Venho deste, te informa quanto a isso <questão>
