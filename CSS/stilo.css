@@ -1,0 +1,42 @@
+header {
+    padding-top: 1em;
+    align-content: center;
+    text-align:center;
+    align-items: baseline;
+    border: 10px solid antiquewhite;
+    background-color: azure;
+}
+main {
+    padding-top: 5em;
+    align-content: baseline;
+    text-align: center;
+    align-items: start;
+    border: 10px solid antiquewhite;
+    background-color: antiquewhite;
+    
+}
+div{
+    padding: 5px 10px 5px 5px; 
+}
+label{
+    vertical-align: super;
+    display:block;
+}
+main .mensagem {
+    padding: 10px 200px 10px 200px;
+    width: max-content 100px;
+    height: 50%;
+}
+
+input{
+    width: 300px;
+}
+
+footer {
+    padding-top: 1em;
+    border: 10px solid antiquewhite;
+    text-align: right;
+    align-items: end;
+    align-content: end;
+    background-color: powderblue;
+}
