@@ -11,6 +11,7 @@ main {
     align-content: baseline;
     text-align: center;
     align-items: start;
+    width: 100%;
     border: 10px solid antiquewhite;
     background-color: antiquewhite;
     
@@ -23,9 +24,12 @@ label{
     display:block;
 }
 main .mensagem {
-    padding: 10px 200px 10px 200px;
-    width: max-content 100px;
-    height: 50%;
+    padding: 10px 30px 10px 30px;
+    width: 500px;
+    height: 600px;
+    text-wrap: avoid;
+    text-align-last: auto;
+    text-align: justify;
 }
 
 input{
