@@ -6,7 +6,7 @@
         Email Em Massa
     </title>
     <link href="/css/stilo.css" rel="stylesheet" type="text/css" />
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="/js/script.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
@@ -27,18 +27,24 @@
             <label for="dest">DESTINO</label>
             <input type="email" id="dest" class="endereco" />
         </div>
-        <div class="mensagem" id="text" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <label>Arraste e solte os elementos aqui na ordem desejada. </label>
+        <label>Arraste e solte os elementos aqui na ordem desejada. </label>
+        <div class="mensagem row col-lg-12" id="text">
+
+            <div id="col1" class="col-lg-4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="col2" class="col-lg-4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="col3" class="col-lg-4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </div>
-        
-        <div class="variavel" id="variavel" title="Variavel" draggable="true">
-            <label>Nesta área criaremos elementos para editar o texto e
-            nomes para usar de referência.</label>
+
+        <div class="variavel" id="variavel" title="Variavel" draggable="true" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <label>
+                Nesta área criaremos elementos para editar o texto e
+                nomes para usar de referência.
+            </label>
             <label for="var">Variavel</label>
             <button class="btn" onclick="addVariavel()">+</button>
             <div id="varPainel"></div>
             <label for="var">Texto padrão</label>
-            <button class="btn" onclick="addTexto()">+</button>
+            <button class="btn btn-outline-success" onclick="addTexto()">+</button>
             <div id="varPainel"></div>
         </div>
 

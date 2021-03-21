@@ -25,18 +25,27 @@ label{
     display:block;
 }
 .mensagem {
-    column-count: auto;
     align-content: center;
     text-align: start;
     overflow: scroll;
-    top: 400px;
-    left: 200px;
+    left: 10px;
     padding: 60px 70px 50px 10px;
     background-color: azure;
-    width: 1000px;
+    width: 500px;
     height: 600px;
-    top: 200px;
+    top: 0px;
 }
+
+#col1,
+#col2,
+#col3 {
+    align-items: center;
+    background-color: aquamarine;
+    border: groove;
+    padding: 10px;
+    width: 30%;
+    height: 800px;
+}    
 
 .variavel {
     overflow: scroll;
@@ -56,10 +65,10 @@ label{
 .btn {
     border-radius: 90px;
     width: 30px;
-    background-color: burlywood;
+    background-color: aliceblue;
     color: tomato;
     stroke-width: 900;
-    font-size: 20px;
+    font-size: 40px;
 }
 #texto {
     background-color: burlywood;

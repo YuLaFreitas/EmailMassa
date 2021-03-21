@@ -8,7 +8,7 @@ function addVariavel() {
         "<div id=\"cardVar" + n + "\" title=\"Variavel\" draggable=\"true\" class=\"card\""
         +" ondragstart=\"drag(event)\">"
         + "<input type=\"text\" id=\"vari" + n +"\" class=\"ref\" />" 
-    + "<button class=\"btn\" onclick=\"remVariavel('cardVar" + n + "')\">-</button>"     
+    + "<button class=\"btn btn-outline-danger\" onclick=\"remVariavel('cardVar" + n + "')\">-</button>"     
         + "</div>"
         ;
 
