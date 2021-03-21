@@ -16,23 +16,33 @@
         <h1>Enviar email para todos</h1>
         <h2>Quando precisar enviar email, assim fica mais fácil</h2>
     </header>
+
+
     <main>
         <div id="de">
             <label for="eDe">ORIGEM</label>
-            <input type="email" id="eDE" class="endereco"/>
+            <input type="email" id="eDE" class="endereco" />
         </div>
         <div id="para">
-            <label for="dest">DESTINO</label>   
+            <label for="dest">DESTINO</label>
             <input type="email" id="dest" class="endereco" />
         </div>
-        <div id="texto">
-            <div class="mensagem" id="text" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="mensagem" id="text" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <label>Arraste e solte os elementos aqui na ordem desejada. </label>
         </div>
-        <div id="variavel" title="Variavel" draggable="true">
+        
+        <div class="variavel" id="variavel" title="Variavel" draggable="true">
+            <label>Nesta área criaremos elementos para editar o texto e
+            nomes para usar de referência.</label>
             <label for="var">Variavel</label>
             <button class="btn" onclick="addVariavel()">+</button>
             <div id="varPainel"></div>
+            <label for="var">Texto padrão</label>
+            <button class="btn" onclick="addTexto()">+</button>
+            <div id="varPainel"></div>
         </div>
+
+
         <div id="anexo">
             <label for="ane">Anexo</label>
             <input type="file" id="ane" class="anexo" />

@@ -18,18 +18,35 @@ main {
 }
 div{
     padding: 5px 10px 5px 5px; 
+    
 }
 label{
     vertical-align: super;
     display:block;
 }
 .mensagem {
-    padding: 10px 30px 10px 30px;
-    width: 200px;
-    height: 300px;
-    text-wrap: avoid;
-    text-align-last: auto;
-    text-align: justify;
+    column-count: auto;
+    align-content: center;
+    text-align: start;
+    overflow: scroll;
+    top: 400px;
+    left: 200px;
+    padding: 60px 70px 50px 10px;
+    background-color: azure;
+    width: 1000px;
+    height: 600px;
+    top: 200px;
+}
+
+.variavel {
+    overflow: scroll;
+    position: fixed;
+    top: 200px;
+    right: 0px;
+    padding: 20px 20px 20px 20px;
+    background-color: burlywood;
+    width: 300px;
+    height: 600px;
 }
 
 .endereco {
@@ -51,12 +68,16 @@ label{
     height: 600px;
     align-content: flex-end;
 }
-#variavel {
-    background-color: burlywood;
-    align-content: flex-end;
-    width: 500px;
-    height:600px;
+
+.card{
+    position: center;
+    display:compact;
+    background-color: bisque;
+    padding: 10px;
+    width: min-content;
+    
 }
+
 btnCop {
     border-radius: 90px;
     width: 100px;
@@ -66,15 +87,23 @@ btnCop {
     font-size: 20px;
 }
 .varPainel {
-     align-content: baseline;
+    position: static;
+     align-content: center;
      padding: 10px;
+     background-color: bisque;
+     border-radius: 50px;
 }
 
 footer {
+    position: fixed;
+    padding: 5em;
+    height: 5px;
     padding-top: 1em;
     border: 10px solid antiquewhite;
     text-align: right;
     align-items: end;
     align-content: end;
     background-color: powderblue;
+    bottom: 0px;
+    right: 0px;
 }

@@ -1,16 +1,15 @@
 var n = 0;
+var t = 0;
 
 
 
 function addVariavel() {
     document.getElementById('varPainel').innerHTML +=
-        "<div id=\"card" + n + "\" title=\"Variavel\" draggable=\"true\" class=\"card\""
-    +" ondragstart=\"drag(event)\">"
-    //+"<label for=\"vari" + n + "\">Variavel</label>" 
-    + "<input type=\"text\" id=\"vari" + n +"\" class=\"ref\" />" 
-    + "<button class=\"btn\" onclick=\"remVariavel('card" + n + "');\">-</button>" 
-    + "<input type='text' value='card" + n + "' id='txt" + n +"' disabled>";    
-    + "</div>"
+        "<div id=\"cardVar" + n + "\" title=\"Variavel\" draggable=\"true\" class=\"card\""
+        +" ondragstart=\"drag(event)\">"
+        + "<input type=\"text\" id=\"vari" + n +"\" class=\"ref\" />" 
+    + "<button class=\"btn\" onclick=\"remVariavel('cardVar" + n + "')\">-</button>"     
+        + "</div>"
         ;
 
     n++;
@@ -18,7 +17,12 @@ function addVariavel() {
 
 function addTexto(){
     document.getElementById('variavel').innerHTML +=
-        "<textarea id=\"msg\" class=\"mensagem\"></textarea>";
+        "<div id=\"cardTxt" + t + "\" title=\"Texto\" draggable=\"true\" class=\"card\""
+        + " ondragstart=\"drag(event)\">"
+        + "<textarea id='txt" + t + "'></textarea > "
+        + "<button class=\"btn\" onclick=\"remVariavel('cardTxt" + t + "');\">-</button>"
+        ;
+    t++;
 };
 
 function allowDrop(ev) {
