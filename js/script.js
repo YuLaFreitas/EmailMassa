@@ -1,14 +1,18 @@
 var n = 0;
 var t = 0;
+var c = 0;
 
 
+function poup() {
+    window.open('index.html#variavel', 'popup, width=200, height=100, scrolling=auto, top=0, left=0');
+}
 
 function addVariavel() {
     document.getElementById('varPainel').innerHTML +=
         "<div id=\"cardVar" + n + "\" title=\"Variavel\" draggable=\"true\" class=\"card\""
         +" ondragstart=\"drag(event)\">"
         + "<input type=\"text\" id=\"vari" + n +"\" class=\"ref\" />" 
-    + "<button class=\"btn btn-outline-danger\" onclick=\"remVariavel('cardVar" + n + "')\">-</button>"     
+    + "<button class=\"btn btn-dark\" onclick=\"remVariavel('cardVar" + n + "')\">-</button>"     
         + "</div>"
         ;
 
@@ -20,9 +24,18 @@ function addTexto(){
         "<div id=\"cardTxt" + t + "\" title=\"Texto\" draggable=\"true\" class=\"card\""
         + " ondragstart=\"drag(event)\">"
         + "<textarea id='txt" + t + "'></textarea > "
-        + "<button class=\"btn\" onclick=\"remVariavel('cardTxt" + t + "');\">-</button>"
+    + "<button class=\"btn btn-dark\" onclick=\"remVariavel('cardTxt" + t + "');\">-</button>"
         ;
     t++;
+};
+
+function addColuna() {
+    document.getElementById('text').innerHTML +=
+        "<div id=\"cardCol" + c + "\" title=\"Coluna" + c + "\" class=\"col-lg-4 col\""
+    + "ondrop=\"drop(event)\" draggable=\"true\" ondragover=\"allowDrop(event)\">"
+    + "<button class=\"btn btn-dark\" onclick=\"remVariavel('cardCol" + c + "');\">-</button>"
+        ;
+    c++;
 };
 
 function allowDrop(ev) {

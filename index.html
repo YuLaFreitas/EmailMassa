@@ -10,7 +10,7 @@
     <script src="/js/script.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
-<body>
+<body onload="poup()">
     
     <header>
         <h1>Enviar email para todos</h1>
@@ -28,11 +28,13 @@
             <input type="email" id="dest" class="endereco" />
         </div>
         <label>Arraste e solte os elementos aqui na ordem desejada. </label>
-        <div class="mensagem row col-lg-12" id="text">
+        <label for="col">Adicionar coluna</label>
+        <button id="col" class="btn btn-dark" onclick="addColuna()">+</button>
 
-            <div id="col1" class="col-lg-4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-            <div id="col2" class="col-lg-4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-            <div id="col3" class="col-lg-4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="mensagem row" id="text">
+
+            <div id="col" class="col-lg-4 col" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
         </div>
 
         <div class="variavel" id="variavel" title="Variavel" draggable="true" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -40,14 +42,18 @@
                 Nesta área criaremos elementos para editar o texto e
                 nomes para usar de referência.
             </label>
-            <label for="var">Variavel</label>
-            <button class="btn" onclick="addVariavel()">+</button>
-            <div id="varPainel"></div>
-            <label for="var">Texto padrão</label>
-            <button class="btn btn-outline-success" onclick="addTexto()">+</button>
-            <div id="varPainel"></div>
-        </div>
+            <div class="row">
+                <label for="var">Variavel</label>
+                <button id="var" class="btn btn-dark" onclick="addVariavel()">+</button>
+                <div id="varPainel"></div>
+            </div>
+            <div class="row">
+                <label for="txt">Texto padrão</label>
+                <button id="txt" class="btn btn-dark" onclick="addTexto()">+</button>
+                <div id="txtPaine"></div>
+            </div>
 
+        </div>
 
         <div id="anexo">
             <label for="ane">Anexo</label>
