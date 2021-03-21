@@ -1,13 +1,17 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>
         Email Em Massa
     </title>
-    <link href="/css/stilo.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/stilo.css" rel="stylesheet" type="text/css" />
+
+    <script src="/js/script.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 <body>
+    
     <header>
         <h1>Enviar email para todos</h1>
         <h2>Quando precisar enviar email, assim fica mais fácil</h2>
@@ -24,10 +28,12 @@
         <div id="texto">
             <label for="msg">Texto padrão</label>
             <textarea id="msg" class="mensagem"></textarea>
+            <div class="mensagem" id="text" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </div>
-        <div id="variavel">
+        <div id="variavel" title="Variavel" draggable="true">
             <label for="var">Variavel</label>
-            <input type="text" id="var" class="ref" />
+            <button class="btn" onclick="addVariavel()">+</button>
+            <div id="varPainel"></div>
         </div>
         <div id="anexo">
             <label for="ane">Anexo</label>

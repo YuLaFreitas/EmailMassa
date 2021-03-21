@@ -32,8 +32,36 @@ main .mensagem {
     text-align: justify;
 }
 
-input{
-    width: 300px;
+.endereco {
+    width: 500px;
+}
+
+.btn {
+    border-radius: 90px;
+    width: 30px;
+    background-color: burlywood;
+    color: tomato;
+    stroke-width: 900;
+    font-size: 20px;
+}
+#texto {
+    background-color: aliceblue;
+    border-radius: 90px;
+    width: 100px;
+    height: 100px;
+}
+
+btnCop {
+    border-radius: 90px;
+    width: 100px;
+    background-color: burlywood;
+    color: tomato;
+    stroke-width: 900;
+    font-size: 20px;
+}
+.varPainel {
+     align-content: baseline;
+     padding: 10px;
 }
 
 footer {
