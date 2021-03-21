@@ -23,10 +23,10 @@ label{
     vertical-align: super;
     display:block;
 }
-main .mensagem {
+.mensagem {
     padding: 10px 30px 10px 30px;
-    width: 500px;
-    height: 600px;
+    width: 200px;
+    height: 300px;
     text-wrap: avoid;
     text-align-last: auto;
     text-align: justify;
@@ -45,12 +45,18 @@ main .mensagem {
     font-size: 20px;
 }
 #texto {
-    background-color: aliceblue;
-    border-radius: 90px;
-    width: 100px;
-    height: 100px;
+    background-color: burlywood;
+    border-radius: 10px;
+    width: 500px;
+    height: 600px;
+    align-content: flex-end;
 }
-
+#variavel {
+    background-color: burlywood;
+    align-content: flex-end;
+    width: 500px;
+    height:600px;
+}
 btnCop {
     border-radius: 90px;
     width: 100px;

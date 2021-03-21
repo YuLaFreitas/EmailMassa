@@ -16,16 +16,26 @@ function addVariavel() {
     n++;
 };
 
+function addTexto(){
+    document.getElementById('variavel').innerHTML +=
+        "<textarea id=\"msg\" class=\"mensagem\"></textarea>";
+};
+
 function allowDrop(ev) {
     ev.preventDefault();
 };
 function drag(ev) {
-    ev.dataTransfer.setData("text", ev.targert.id);
+    ev.dataTransfer.setData('texto', event.target.id);
+    console.log("Pegou");
 };
 function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.targert.appendChild(document.getElementById(data));
+    const id = event.dataTransfer.getData('texto');
+    const element = document.getElementById(id);
+    const zone = event.target;
+    zone.appendChild(element);
+    event.DataTransfer.clearData();
+
+    console.log("soltou");
 };
 
 function remVariavel(tag) {
