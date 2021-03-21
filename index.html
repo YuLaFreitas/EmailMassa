@@ -5,18 +5,17 @@
     <title>
         Email Em Massa
     </title>
-    <link href="/css/stilo.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/stilo.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="/js/script.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
-<body onload="poup()">
+<body>
     
     <header>
         <h1>Enviar email para todos</h1>
         <h2>Quando precisar enviar email, assim fica mais fácil</h2>
     </header>
-
 
     <main>
         <div id="de">
@@ -33,7 +32,7 @@
 
         <div class="mensagem row" id="text">
 
-            <div id="col" class="col-lg-4 col" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="col" class="col-lg-4 col" title="Coluna" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
         </div>
 
@@ -52,7 +51,6 @@
                 <button id="txt" class="btn btn-dark" onclick="addTexto()">+</button>
                 <div id="txtPaine"></div>
             </div>
-
         </div>
 
         <div id="anexo">
