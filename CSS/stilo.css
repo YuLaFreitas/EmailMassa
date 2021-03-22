@@ -25,8 +25,22 @@ label{
     vertical-align: super;
     display:block;
 }
-.mensagem {
-    align-content: center;
+
+.cardCol {
+    vertical-align: super;
+    
+    align-items:start;
+    display: flex;
+    box-sizing: border-box;
+    background-color: #aaffbe;
+    width: 70%;
+    height: 30%;
+}
+
+.corpoTexto {
+    vertical-align: super;
+    display: inline-block;
+    /*align-items: flex-start;*/
     text-align: start;
     overflow: scroll;
     left: 10px;
@@ -39,11 +53,13 @@ label{
 
 .col {
     align-content: center;
-    background-color:white;
+    
+    
     border: groove;
     padding: 10px;
-    width: min-content;
-    height: 800px;
+    width: 60%;
+    flex-direction: row;
+    
 }
 
 .variavel {
@@ -83,7 +99,7 @@ label{
 .card{
     position: center;
     display:compact;
-    background-color: bisque;
+    background-color: #1131ce;
     padding: 10px;
     width: min-content;
     

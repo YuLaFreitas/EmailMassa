@@ -9,7 +9,7 @@ function poup() {
 
 function addVariavel() {
     document.getElementById('varPainel').innerHTML +=
-        "<div id=\"cardVar" + n + "\" title=\"Variavel\" draggable=\"true\" class=\"card\""
+        "<div id=\"cardVar" + n + "\" title=\"Variavel\" draggable=\"true\" class=\"col card\""
         +" ondragstart=\"drag(event)\">"
         + "<input type=\"text\" id=\"vari" + n +"\" class=\"ref\" />" 
     + "<button class=\"btn btn-dark\" onclick=\"remVariavel('cardVar" + n + "')\">-</button>"     
@@ -30,8 +30,8 @@ function addTexto(){
 };
 
 function addColuna() {
-    document.getElementById('text').innerHTML +=
-        "<div id=\"cardCol" + c + "\" title=\"Coluna" + c + "\" class=\"col-lg-4 col\""
+    document.getElementById('corpo').innerHTML +=
+        "<div id=\"cardCol" + c + "\" title=\"Coluna" + c + "\" class=\"cardCol\""
     + "ondrop=\"drop(event)\" draggable=\"true\" ondragover=\"allowDrop(event)\">"
     + "<button class=\"btn btn-dark\" onclick=\"remVariavel('cardCol" + c + "');\">-</button>"
         ;
