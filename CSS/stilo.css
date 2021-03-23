@@ -1,14 +1,14 @@
 header {
     position:relative;
     padding-top: 1em;
-    align-content: center;
+    align-content: start;
     text-align:center;
     align-items: baseline;
     border: 10px solid antiquewhite;
     background-color: azure;
 }
 main {
-    padding-top: 5em;
+    padding-top: 1em;
     align-content: baseline;
     text-align: center;
     align-items: start;
@@ -27,24 +27,23 @@ label{
 }
 
 .cardCol {
-    vertical-align: super;
-    
+    vertical-align: super;    
     align-items:start;
     display: flex;
     box-sizing: border-box;
     background-color: #aaffbe;
-    width: 70%;
+    width: 80%;
     height: 30%;
 }
 
 .corpoTexto {
-    vertical-align: super;
-    display: inline-block;
+    /*vertical-align: super;*/
+    /*display: inline-block;*/
     /*align-items: flex-start;*/
     text-align: start;
     overflow: scroll;
     left: 10px;
-    padding: 60px 70px 50px 10px;
+    padding: 10px 10px 10px 10px;
     background-color: azure;
     width: 75%;
     height: 600px;
@@ -96,13 +95,16 @@ label{
     align-content: flex-end;
 }
 
-.card{
+.card {
+    align-content: baseline;
+    vertical-align: super;
+    align-items: start;
+    display: flex;
     position: center;
-    display:compact;
+    display: compact;
     background-color: #1131ce;
     padding: 10px;
     width: min-content;
-    
 }
 
 btnCop {

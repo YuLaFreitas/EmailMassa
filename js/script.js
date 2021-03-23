@@ -9,7 +9,7 @@ function poup() {
 
 function addVariavel() {
     document.getElementById('varPainel').innerHTML +=
-        "<div id=\"cardVar" + n + "\" title=\"Variavel\" draggable=\"true\" class=\"col card\""
+        "<div id=\"cardVar" + n + "\" title=\"Variavel\"  draggable=\"true\" class=\"col card\""
         +" ondragstart=\"drag(event)\">"
         + "<input type=\"text\" id=\"vari" + n +"\" class=\"ref\" />" 
     + "<button class=\"btn btn-dark\" onclick=\"remVariavel('cardVar" + n + "')\">-</button>"     
