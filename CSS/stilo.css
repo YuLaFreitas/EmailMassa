@@ -77,16 +77,17 @@ label{
 .endereco {
     width: 500px;
 }
-/*
-.btn {
+
+.botao {
     border-radius: 90px;
+    height: 30px;
     width: 30px;
     background-color: aliceblue;
     color: tomato;
     stroke-width: 900;
-    font-size: 40px;
+    font-size: 20px;
 }
-*/
+
 #texto {
     background-color: burlywood;
     border-radius: 10px;

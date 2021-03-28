@@ -16,21 +16,24 @@
         <h1>Enviar email para todos</h1>
         <h2>Quando precisar enviar email, assim fica mais fácil</h2>
     </header>
-
+    <form method="post" action="php/montador.php">
     <main>
-        <div id="de">
-            <label for="eDe">ORIGEM</label>
-            <input type="email" id="eDE" class="endereco" />
+
+        <div id="Vde">
+            <label for="de">ORIGEM</label>
+            <input type="email" id="de" name="de" class="endereco" />
         </div>
-        <div id="para">
-            <label for="dest">DESTINO</label>
-            <input type="email" id="dest" class="endereco" />
+        <div id="Vpara">
+            <label for="para">DESTINO</label>
+            <input type="email" id="para" name="para" class="endereco" />
         </div>
         <label>Arraste e solte os elementos aqui na ordem desejada. </label>
         <label for="col">Adicionar coluna</label>
-        <button id="col" class="btn btn-dark" onclick="addColuna()">+</button>
+        <input type="button" value="+" id="col" class="botao" onclick="addColuna()">
 
-        <div class="corpoTexto" id="corpo">    </div>
+        <div class="corpoTexto" id="corpo">
+        <input class="col-md-4" type="submit">
+        </div>
 
         <div class="variavel" id="variavel" title="Variavel" draggable="true" ondrop="drop(event)" ondragover="allowDrop(event)">
             <label>
@@ -39,21 +42,22 @@
             </label>
             <div class="row">
                 <label for="var">Variavel</label>
-                <button id="var" class="btn btn-dark" onclick="addVariavel()">+</button>
+                <input type="button" value="+" id="var" class="botao" onclick="addVariavel()">
                 <div id="varPainel"></div>
             </div>
             <div class="row">
                 <label for="txt">Texto padrão</label>
-                <button id="txt" class="btn btn-dark" onclick="addTexto()">+</button>
+                <input type="button" value="+" id="txt" class="botao" onclick="addTexto()">
                 <div id="txtPaine"></div>
             </div>
         </div>
 
         <div id="anexo">
             <label for="ane">Anexo</label>
-            <input type="file" id="ane" class="anexo" />
+            <input type="file" id="ane" name="anexo" class="anexo" />
         </div>
     </main>
+    </form>
     <footer>
         <h2>Realização &copy;SOFTCODE </h2>
     </footer>

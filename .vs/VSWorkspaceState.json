@@ -3,8 +3,9 @@
     "",
     "\\CSS",
     "\\img",
-    "\\js"
+    "\\js",
+    "\\php"
   ],
-  "SelectedNode": "\\js\\script.js",
+  "SelectedNode": "\\php\\disparador.php",
   "PreviewInSolutionExplorer": false
 }
