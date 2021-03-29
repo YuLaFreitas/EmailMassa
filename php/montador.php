@@ -2,25 +2,27 @@
 $de =  $_POST['de'];
 $para =  $_POST['para'];
 $anexo =  $_POST['anexo'];
-for($v = 0; $v >10; $v++) {
-    if (isset($_POST['variavel'.$v]) || empty($_POST['variavel'.$v])){
-        //$variavel[$v] = $_POST['variavel' . $v];
-        echo $_POST['variavel'.$v];//$variavel[$v];
-}
-}
+$variavel = [];
+$texto = [];
 
-for($t = 0; $t >10; $t++) {
- if(isset($_POST['texto'.$t])||empty($_POST['texto'.$t])) {
-     //$mensagem[$t] = $_POST['texto'.$t];
-     echo $_POST['texto' . $t];//$mensagem[$t];
- }
-    }
-//if(isset($_POST['de'])||empty($_POST['de'])) $de =  ""; else $de =  $_POST['de'];
-//if(isset($_POST['para'])||empty($_POST['para'])) $para =  ""; else $para =  $_POST['para'];
-//if(isset($_POST['anexo'])||empty($_POST['anexo'])) $anexo =  ""; else $anexo =  $_POST['anexo'];
-//$mensagem = []; // = $_POST['texto'];
-//$variavel = [];// = $_POST['variavel'];
+$v=0; $t=0;
 
+  do{
+      if(!empty($_POST['variavel'.$v])) {
+          $variavel[$v] = $_POST['variavel' . $v];
+          echo "<h1> Variavel: " . $variavel[$v] . "</h1>";
+      }
+      $v = $v +1;
+}while(isset($_POST['variavel'.$v]));
 
-echo sprintf("<h1>De: %s para: %s <br>anexo: </h1>", $de, $para);
+  do{
+      if(!empty($_POST['texto'.$t])) {
+          $texto[$t] = $_POST['texto' . $t];
+          echo "<h1>Texto: " . $texto[$t] . "</h1>";
+      }
+      $t = $t +1;
 
+}while(isset($_POST['texto'.$t]));
+
+echo sprintf("<h1>De: %s para: %s <br>anexo: %s</h1>",
+    $de, $para, $anexo);
