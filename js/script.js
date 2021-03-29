@@ -6,7 +6,7 @@ function addVariavel() {
     document.getElementById('varPainel').innerHTML +=
         "<div id=\"cardVar" + n + "\" title=\"Variavel\"  draggable=\"true\" class=\"col card\""
         +" ondragstart=\"drag(event)\">"
-        + "<input type=\"text\" id=\"vari" + n +"\" name='variavel'/>"
+        + "<input type=\"text\" id=\"vari" + n +"\" name='variavel" + n +"'/>"
     + "<button class=\"botao\" onclick=\"remVariavel('cardVar" + n + "')\">X</button>"
         + "</div>"
         ;
@@ -18,7 +18,7 @@ function addTexto(){
     document.getElementById('variavel').innerHTML +=
         "<div id=\"cardTxt" + t + "\" title=\"Texto\" draggable=\"true\" class=\"card\""
         + " ondragstart=\"drag(event)\">"
-        + "<textarea id='txt" + t + "' name='texto'></textarea > "
+        + "<textarea id='txt" + t + "' name='texto" + t + "'></textarea > "
     + "<button class=\"botao\" onclick=\"remVariavel('cardTxt" + t + "');\">X</button>"
         ;
     t++;
