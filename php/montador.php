@@ -1,10 +1,13 @@
 <?php
+
+include 'disparador.php';
+
+$assunto = $_POST['assunto'];
 $de =  $_POST['de'];
 $para =  $_POST['para'];
 $anexo =  $_POST['anexo'];
 $variavel = [];
 $texto = [];
-
 $v=0; $t=0;
 
   do{
@@ -23,6 +26,8 @@ $v=0; $t=0;
       $t = $t +1;
 
 }while(isset($_POST['texto'.$t]));
-
+  $txtHTML = "<p>".implode("",$texto)."</p>";
+  $varHTML = "<p>".implode("",$variavel)."</p>";
+    enviarEmail($de, $para, $assunto,$txtHTML, $anexo);
 echo sprintf("<h1>De: %s para: %s <br>anexo: %s</h1>",
     $de, $para, $anexo);
