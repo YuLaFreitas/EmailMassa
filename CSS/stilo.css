@@ -95,15 +95,20 @@ label{
     height: 600px;
     align-content: flex-end;
 }
+.card h1{
+    font-size: large;
+    color: darkgreen;
+    background: aliceblue;
+    font-family: Caladea, serif;
 
+}
 .card {
     align-content: baseline;
     vertical-align: super;
     align-items: start;
-    display: flex;
     position: center;
     display: compact;
-    background-color: #1131ce;
+    background-color: #bca636;
     padding: 10px;
     width: min-content;
 }

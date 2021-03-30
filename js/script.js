@@ -1,13 +1,42 @@
-var n = 0;
-var t = 0;
-var c = 0;
+let n = 0;
+let t = 0;
+let c = 0;
+let h = 0;
+let b = 0;
+let r = 0;
+let o = 0;
+
+function addCabecalho(id){
+
+    document.getElementById(id).innerHTML +=
+    "<div  title='card' class='card' id='cardV"+h+"'"
+    +" draggable='true'  ondragstart='drag(event)'>"
+    +"<input type='text' id='cad"+h+"' "
+    +"onkeyup=\"document.getElementById('cabecalho"+h+"').innerText = this.value\" >"
+    +"<h1 id='cabecalho"+h+"'></h1>"
+    +"</div>";
+        h++;
+}
+
+function addCorpo(){
+    document.getElementById('varPainel').innerHTML +=
+    b++;
+}
+function addRodape(){
+    document.getElementById('varPainel').innerHTML +=
+    r++;
+}
+function addNota(){
+    document.getElementById('varPainel').innerHTML +=
+    o++;
+}
 
 function addVariavel() {
     document.getElementById('varPainel').innerHTML +=
         "<div id=\"cardVar" + n + "\" title=\"Variavel\"  draggable=\"true\" class=\"col card\""
         +" ondragstart=\"drag(event)\">"
         + "<input type=\"text\" id=\"vari" + n +"\" name='variavel" + n +"'/>"
-    + "<button class=\"botao\" onclick=\"remVariavel('cardVar" + n + "')\">X</button>"
+    + "<button class=\"botao\" onclick=\"remVariavel('cardVar" + n + "')\">X</button>" +
         + "</div>"
         ;
 
@@ -26,10 +55,15 @@ function addTexto(){
 
 function addColuna() {
     document.getElementById('corpo').innerHTML +=
-        "<div id=\"cardCol" + c + "\" title=\"coluna" + c + "\" class=\"cardCol\""
-    + " ondrop=\"drop(event)\" draggable=\"true\" ondragover=\"allowDrop(event)\">"
-    + "<button class=\"botao\" onclick=\"remVariavel('cardCol" + c + "');\">X</button>"
-        ;
+     "<div id='cardCol"+c+"' title='coluna"+c+"' class='cardCol'"
+    +" ondrop='drop(event)' draggable='true' ondragover='allowDrop(event)'>"
+    +"<div class='col-md-4'> <div class='row'>"
+    +"<input type='button' value='x' class='botao'"
+    +" onclick=\"remVariavel('cardCol"+c+"');\">"
+    +"</div><div class='row'>"
+    +"<input type='button' value='+' class='botao' "
+    +"onclick=\"addCabecalho('cardCol"+c+"');\">"
+    +"</div>" +"</div> " + "</div>";
     c++;
 }
 
@@ -54,7 +88,7 @@ function drop(ev) {
 
 function remVariavel(tag) {
 
-    var txt = confirm("Deseja que seja exluido esta variavel ?");
+    let txt = confirm("Deseja que seja exluido esta variavel ?");
     
     if (txt == true) {
         document.getElementById(tag).remove();

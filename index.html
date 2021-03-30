@@ -31,11 +31,11 @@
             <input type="email" id="para" name="para" class="endereco" />
         </div>
         <label>Arraste e solte os elementos aqui na ordem desejada. </label>
-        <label for="col">Adicionar coluna</label>
+        <label for="col">Adicionar linha</label>
         <input type="button" value="+" id="col" class="botao" onclick="addColuna()">
 
         <div class="corpoTexto" id="corpo">
-        <input class="col-md-4" type="submit">
+
         </div>
 
         <div class="variavel" id="variavel" title="Variavel" draggable="true" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -53,12 +53,14 @@
                 <input type="button" value="+" id="txt" class="botao" onclick="addTexto()">
                 <div id="txtPaine"></div>
             </div>
+            <input class="col-md-4" type="submit">
         </div>
 
         <div id="anexo">
             <label for="ane">Anexo</label>
             <input type="file" id="ane" name="anexo" class="anexo" />
         </div>
+
     </main>
     </form>
     <footer>
