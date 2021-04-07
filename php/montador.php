@@ -9,7 +9,16 @@ $anexo =  $_POST['anexo'];
 $variavel = [];
 $texto = [];
 $v=0; $t=0;
-
+/*
+ * Posso criar um json com dados que altere o texto que recebi, por exemplo
+ *O cliente evia o post['texto'] insiro este em um array
+ * e este vai buscar uma referência, tipo '[' início ']' fim
+ * pego esta referncia, e faço uma consulta em uma lista na tabela que o cliente fornceu,
+ * para isso o cliente vai enviar um documento contendo linhas e colunas. com
+ * origens e variavel1, variavel2...
+ * o sistema pegará este arquivo, e vai criar um json
+ *origiem:['email@exemplo.com.br', 'outro@exemplo.com'], variavel1:['nome'
+ */
   do{
       if(!empty($_POST['variavel'.$v])) {
           $variavel[$v] = $_POST['variavel' . $v];

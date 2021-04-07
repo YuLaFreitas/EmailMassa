@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="iruyt"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-31 02:48:01 "/>
+        <attribute name="created" value="aXJ1eXQ7RlJFSVRBUzsyMDIxLTAzLTMxOyIxMjozNDoyMCAiOzIyNzg="/>
+        <attribute name="edited" value="aXJ1eXQ7RlJFSVRBUzsyMDIxLTAzLTMxOyIwMjo0ODowMSAiOzE7MjM4OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <input variable="CODIGO"/>
+            <declare name="SQL" type="String" array="False" size=""/>
+            <declare name="DRIVE" type="String" array="False" size=""/>
+            <assign variable="DRIVE" expression="BUSCAR()"/>
+            <if expression="DRIVE != NULL">
+                <then>
+                    <if expression="isBiblioteca(DRIVE)">
+                        <then>
+                            <call expression="tradutor(drive, SQL)"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <output expression="file(SCRIPT)" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

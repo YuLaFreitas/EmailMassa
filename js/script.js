@@ -5,7 +5,7 @@ let h = 0;
 let b = 0;
 let r = 0;
 let o = 0;
-
+let caminho;
 function addCabecalho(id){
 
     document.getElementById(id).innerHTML +=
@@ -31,18 +31,6 @@ function addNota(){
     o++;
 }
 
-function addVariavel() {
-    document.getElementById('varPainel').innerHTML +=
-        "<div id=\"cardVar" + n + "\" title=\"Variavel\"  draggable=\"true\" class=\"col card\""
-        +" ondragstart=\"drag(event)\">"
-        + "<input type=\"text\" id=\"vari" + n +"\" name='variavel" + n +"'/>"
-    + "<button class=\"botao\" onclick=\"remVariavel('cardVar" + n + "')\">X</button>" +
-        + "</div>"
-        ;
-
-    n++;
-}
-
 function addTexto(){
     document.getElementById('variavel').innerHTML +=
         "<div id=\"cardTxt" + t + "\" title=\"Texto\" draggable=\"true\" class=\"card\""
@@ -54,7 +42,7 @@ function addTexto(){
 }
 
 function addColuna() {
-    document.getElementById('corpo').innerHTML +=
+    document.getElementById('corpoTexto').innerHTML +=
      "<div id='cardCol"+c+"' title='coluna"+c+"' class='cardCol'"
     +" ondrop='drop(event)' draggable='true' ondragover='allowDrop(event)'>"
     +"<div class='col-md-4'> <div class='row'>"
@@ -109,6 +97,51 @@ function copiar_link(txt) {
     alert("teste " + linke);
 
 }; */
+
+
+function addVariavel() {
+
+    document.getElementById('varPainel').innerHTML +=
+        "<div id=\"cardVar" + n + "\" title=\"Variavel\"  draggable=\"true\" class=\"col card\""
+        +" ondragstart=\"drag(event)\">"
+        //+ "<input type=\"text\" id=\"vari" + n +"\" name='variavel" + n +"'/>"
+        + "<div class='col-md-4'> "
+        + "<input type='file' class='botao' onchange='addGuardar(this)'> "
+        + "<button class='botao' onclick=\"remVariavel('cardVar" + n + "')\">X</button>" +
+        + "</div></div>";
+
+    n++;
+}
+
+function addGuardar(arquivo){
+    var leitor = new FileReader();
+    leitor.readAsText(arquivo);
+
+    caminho = leitor;
+    console.log(caminho);
+    let texto = csv2json(caminho);
+    document.getElementById('varPainel').innerHTML +=
+        "<h1>"+texto.length + "</h1>";
+
+}
+function csv2json(csv){
+    console.log(csv);
+    var linha = csv.split("\n");
+    var resultado = [];
+    var cabecalho = linha[0].split(",");
+
+    for(var i=1; i<linha.length ;i++){
+        var obj = {};
+        var linhasCorridas = linha[i].split(",");
+
+        for(var j=0; j<cabecalho.length; j++){
+            obj[cabecalho[j]] = linhasCorridas[j];
+        }
+        resultado.push(obj);
+    }
+  //return resultado;
+return JSON.stringify(resultado);
+}
 
 function copiar(tag) {
     //var g = tag;
